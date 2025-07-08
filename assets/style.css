@@ -1,11 +1,12 @@
 :root {
- --text-color:#DBE4EF;
+ --text-color:#003d88;
+ --card-black--color:#000000;
  --card-front-color:#00F4BF;
 }
 
 body {
     background:url(img/bg-desktop.webp);
-  font-family: italian;  
+  font-family: Italian;  
 }
 footer {
     background-color: black;
@@ -18,7 +19,7 @@ footer {
 
 footer p { 
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.6rem;
     margin-top: 0.5rem;
 }
 
@@ -35,7 +36,9 @@ footer p {
 
  .cartao__conteudo {
   text-align: center;
-  background-color: var(--card-front-color)
+  background-color: var(--card-front-color);
+  /*background-color: aquamarine; */
+  transform-style: transform 300ms ease-in-out;
   height: 100%;
  }
 .cartao__conteudo h3{
@@ -47,6 +50,33 @@ footer p {
    margin: 0.6rem;
    border-radius: 0.6rem;
    font-size: 1vw;
+   backface-visibility: hidden;
 }
 
-.cartao-
+.cartao__conteudo__pergunta p {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.cartao__conteudo__resposta p{
+  color: var(--card-black--color);
+  font-weight: 700;
+}
+
+.cartao__conteudo p {
+  margin-top: 1rem;
+  padding: 2rem;
+}
+
+.cartao:hover .cartao__conteudo {
+  transform: rotateY(180deg);
+}
+
+.cartao__conteudo__pergunta,
+.cartao__conteudo__resposta{
+  backface-visibility: hidden;
+}
+
+.cartao__conteudo__resposta{
+  transform: rotateY(180deg);
+}
